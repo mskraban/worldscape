@@ -2,8 +2,8 @@
 
 > Worldscape invents a tiny fictional country from one seed word: a parchment map with rivers, roads and provinces, a flag, a coat of arms, an invented language, a chronicle of its history and a playable anthem with sheet music. Free, open source (MIT), deterministic and offline. No AI is used.
 
-- App: https://worldscape-mskrabans-projects.vercel.app/app
-- Docs: https://worldscape-mskrabans-projects.vercel.app/docs
+- App: https://worldscape-teal.vercel.app/app
+- Docs: https://worldscape-teal.vercel.app/docs
 - Source: https://github.com/mskraban/worldscape
 
 ## API (no key)
