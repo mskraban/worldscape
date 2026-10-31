@@ -11,7 +11,7 @@
 html { scroll-behavior: smooth; color-scheme: dark; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.65 var(--font-body); text-rendering: optimizeLegibility; }
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; letter-spacing: .01em; line-height: 1.15; margin: 0; }
-p { margin: 0; } a { color: inherit; } img, canvas { max-width: 100%; }
+p { margin: 0; } a { color: inherit; } img, canvas { max-width: 100%; height: auto; }
 code, kbd, pre { font-family: var(--font-mono); }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: #000; padding: 8px 14px; border-radius: 8px; z-index: 100; } .skip:focus { left: 8px; }
