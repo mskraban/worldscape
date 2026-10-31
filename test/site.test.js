@@ -27,7 +27,7 @@ for (const [file, route] of Object.entries(pages)) {
     const html = read(file);
     for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) JSON.parse(m[1]);
     for (const m of html.matchAll(/(?:href|src)="([^"#?]+)[^"]*"/g)) {
-      const u = m[1]; if (/^(https?:|mailto:|data:|\/\/)/.test(u) || /\$\{/.test(u) || /^\/?(api|c|poster|map|flag|arms|anthem|random)(\/|$)/.test(u)) continue;
+      const u = m[1]; if (/^(https?:|mailto:|data:|\/\/)/.test(u) || /\$\{/.test(u) || /^\/?(api|c|poster|map|flag|arms|anthem|random|_vercel)(\/|$)/.test(u)) continue;
       const clean = u.replace(/^\//, ''); assert.ok(clean === '' || fs.existsSync(path.join(PUB, clean)) || fs.existsSync(path.join(PUB, clean + '.html')), `${file} links to a missing file: ${u}`);
     }
   });

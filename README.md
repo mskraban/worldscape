@@ -32,7 +32,7 @@ Every tabletop campaign, novel and classroom needs a place that does not exist y
 - 🎼 **An anthem**: lyrics in the national tongue with a translation, a melody fitted to the syllables, engraved sheet music, in-browser playback and MIDI download.
 - 🖨️ **A printable poster** on A-series proportions. Download at 150 or 300 dpi, or print from the browser.
 - 🔌 **A free API**: every piece is a URL. No key.
-- 🔒 **Offline and private.** The generator runs entirely in your browser. No AI, no tracking, no accounts.
+- 🔒 **Offline and private.** The generator runs entirely in your browser. No AI, no accounts, no cookies. The hosted site only counts anonymous page views (Vercel Web Analytics); your seeds and countries are never sent anywhere.
 
 ## Gallery
 

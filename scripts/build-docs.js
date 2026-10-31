@@ -97,6 +97,8 @@ ${code(`const W = require('./public/engine.js');       // or <script src="engine
 </div>
 </main>
 <footer class="footer"><div class="container"><div><a class="brand" href="/">Worldscape</a></div><div><h4>Product</h4><a href="/app">Generator</a></div><div><h4>Project</h4><a href="https://github.com/mskraban/worldscape">GitHub</a></div><div></div><div class="fine"><span>© Worldscape contributors · MIT</span></div></div></footer>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 `;

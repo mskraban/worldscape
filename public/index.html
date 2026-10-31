@@ -100,7 +100,7 @@
   <div class="section-head"><span class="eyebrow">How it works</span><h2 class="h2">Deterministic, so it is shareable.</h2></div>
   <div class="steps">
     <div class="card"><h3>Type a word</h3><p>Anything works: a name, a phrase, a date. The word is hashed into independent random streams, one per feature.</p></div>
-    <div class="card"><h3>The engine builds it</h3><p>Terrain, rivers, borders, names, heraldry, history and music, all by plain algorithms. No model, no network, no tracking.</p></div>
+    <div class="card"><h3>The engine builds it</h3><p>Terrain, rivers, borders, names, heraldry, history and music, all by plain algorithms. No model, and no network calls to make your country.</p></div>
     <div class="card"><h3>Share the word</h3><p>Send someone the seed and they see exactly your country. Your table, your readers or your class all get the same map.</p></div>
   </div>
   <div class="uses" style="margin-top:40px"><span>Tabletop RPG campaigns</span><span>Novels and screenplays</span><span>Classroom geography</span><span>Game jams</span><span>Worldbuilding prompts</span><span>Wall posters</span></div>
@@ -141,5 +141,7 @@
 <script>
 document.querySelectorAll('.copy').forEach((b) => b.addEventListener('click', async () => { const t = document.getElementById(b.dataset.copy).innerText; try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; setTimeout(() => (b.textContent = 'Copy'), 1500); } catch (e) {} }));
 </script>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
