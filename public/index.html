@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Worldscape: Generate a Fantasy Country, Map, Flag and Anthem</title>
+<meta name="description" content="Worldscape invents a tiny country from one word: parchment map, flag, coat of arms, invented language, history and a playable anthem. Free, offline, printable poster.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0d1018">
+<link rel="canonical" href="https://worldscape.vercel.app/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Worldscape">
+<meta property="og:title" content="Worldscape: a whole country from one word">
+<meta property="og:description" content="Map, flag, coat of arms, language, history and an anthem you can play. Free, offline and printable.">
+<meta property="og:url" content="https://worldscape.vercel.app/">
+<meta property="og:image" content="https://worldscape.vercel.app/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Worldscape: a whole country from one word">
+<meta name="twitter:description" content="Map, flag, coat of arms, language, history and an anthem you can play.">
+<meta name="twitter:image" content="https://worldscape.vercel.app/og.jpg">
+<link rel="preload" href="fonts/cinzel-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Worldscape","url":"https://worldscape.vercel.app/","applicationCategory":"DesignApplication","operatingSystem":"Any","description":"Generates a complete fictional country from a seed word: map, flag, coat of arms, language, history and anthem.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://opensource.org/licenses/MIT"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Worldscape free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is open source under the MIT licence, needs no account and no API key, and runs entirely in your browser."}},{"@type":"Question","name":"Does it use AI?","acceptedAnswer":{"@type":"Answer","text":"No. Every country is built by deterministic algorithms from the seed word, so the same word gives the same country everywhere and it works offline."}},{"@type":"Question","name":"Can I use the maps and flags in my game or book?","acceptedAnswer":{"@type":"Answer","text":"Yes. What you generate is yours to use, including commercially. Credit is appreciated but not required."}}]}]}</script>
+<style>
+.hero { padding: 84px 0 56px; text-align: center; background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(226,177,60,.13), transparent 70%); }
+.hero h1 { font-size: clamp(38px, 7vw, 82px); letter-spacing: .02em; max-width: 14ch; margin: 18px auto 0; }
+.hero .lead { margin: 22px auto 0; text-align: center; }
+.try { display: flex; gap: 10px; max-width: 560px; margin: 34px auto 0; }
+.try input { flex: 1; min-width: 0; font: 600 20px var(--font-display); padding: 14px 20px; border-radius: 999px; background: var(--panel); border: 1px solid var(--line2); color: var(--text); letter-spacing: .03em; }
+.try input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.hint { color: var(--faint); font-size: 14px; margin-top: 14px; } .hint a { color: var(--gold); text-decoration: none; margin: 0 4px; font-family: var(--font-mono); }
+.showcase { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 56px; align-items: start; }
+.showcase img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line2); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); background: #1b1b1b; }
+.showcase a:nth-child(2) { margin-top: 36px; } @media (max-width: 800px) { .showcase { grid-template-columns: 1fr 1fr; } .showcase a:nth-child(3) { display: none; } .showcase a:nth-child(2) { margin-top: 0; } }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; } @media (max-width: 900px) { .grid3 { grid-template-columns: 1fr 1fr; } } @media (max-width: 600px) { .grid3 { grid-template-columns: 1fr; } }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; } @media (max-width: 900px) { .split { grid-template-columns: 1fr; } }
+.split img { width: 100%; border-radius: 12px; border: 1px solid var(--line2); display: block; }
+.tabsimg { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; } .tabsimg img { border-radius: 10px; border: 1px solid var(--line2); width: 100%; }
+.steps { counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; } @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
+.steps .card::before { counter-increment: s; content: counter(s); font: 700 34px var(--font-display); color: var(--gold); }
+.uses { display: flex; flex-wrap: wrap; gap: 12px; } .uses span { border: 1px solid var(--line2); border-radius: 999px; padding: 10px 18px; color: var(--muted); }
+.cta { text-align: center; padding: 100px 0; background: radial-gradient(ellipse 60% 70% at 50% 100%, rgba(208,102,58,.18), transparent 70%); } .cta h2 { font-size: clamp(30px, 5vw, 54px); max-width: 18ch; margin: 0 auto 26px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main"><div class="container">
+  <a class="brand" href="/"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0d1018"/><circle cx="32" cy="32" r="21" fill="none" stroke="#e2b13c" stroke-width="2.2"/><path d="M32 8 L37 27 L56 32 L37 37 L32 56 L27 37 L8 32 L27 27 Z" fill="#e8a54a"/><circle cx="32" cy="32" r="3.2" fill="#0d1018"/></svg>Worldscape</a>
+  <div class="nav-links"><a href="#features">Features</a><a href="#api">API</a><a href="/docs">Docs</a><a href="https://github.com/mskraban/worldscape">GitHub</a><a class="btn primary sm" href="/app">Make a country</a></div>
+</div></nav>
+
+<main id="main">
+<header class="hero"><div class="container">
+  <span class="eyebrow">Free · offline · no AI · no sign-up</span>
+  <h1>A whole country from <span class="grad-text">one word.</span></h1>
+  <p class="lead">Type any word. Worldscape invents a tiny nation: a parchment map with rivers and roads, a flag, a coat of arms, a language behind every place name, a chronicle of its history and an anthem you can play. Print it as a poster.</p>
+  <form class="try" action="/app" method="get"><input name="seed" value="saffron" aria-label="Seed word" maxlength="200" autocomplete="off" spellcheck="false"><button class="btn primary" type="submit">Create</button></form>
+  <p class="hint">or try <a href="/app?seed=harbor">harbor</a><a href="/app?seed=glacier">glacier</a><a href="/app?seed=mistral">mistral</a><a href="/app?seed=lantern">lantern</a></p>
+  <div class="showcase">
+    <a href="/app?seed=harbor"><img src="gallery/poster-harbor.jpg" width="900" height="1273" alt="Poster of a generated archipelago nation with map, flag, arms and sheet music" fetchpriority="high"></a>
+    <a href="/app?seed=saffron"><img src="gallery/poster-saffron.jpg" width="900" height="1273" alt="Poster of a generated island republic with parchment map" fetchpriority="high"></a>
+    <a href="/app?seed=mistral"><img src="gallery/poster-mistral.jpg" width="900" height="1273" alt="Poster of a generated continental principality" loading="lazy"></a>
+  </div>
+</div></header>
+
+<section class="section" id="features"><div class="container">
+  <div class="section-head"><span class="eyebrow">Everything in one seed</span><h2 class="h2">Six things that usually take a week.</h2><p class="lead">Each part is generated from the same seed, so they fit together: the blue on the flag is the sea on the map, and the name of the capital means something in the language.</p></div>
+  <div class="grid3">
+    <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg></div><h3>A real-looking map</h3><p>Coastlines, rivers that flow downhill, mountain ranges, forests, roads between cities, provinces and neighbouring lands. Parchment, atlas or night style.</p></article>
+    <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 5h13l-3 4 3 4H5"/></svg></div><h3>Flag and coat of arms</h3><p>Heraldry that follows the rules of tincture, with symbols drawn from the country itself: anchors for island nations, mountains for highlands, wheat for plains.</p></article>
+    <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h16"/></svg></div><h3>An invented language</h3><p>Ten phonologies, each with its own vocabulary. “Salodin” really means “Old Harbor”, and the glossary tells you so.</p></article>
+    <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>A chronicle</h3><p>A dated history that mentions the actual rivers, peaks, ports and neighbours of your country: founding, floods, plagues, wars and a constitution.</p></article>
+    <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div><h3>An anthem you can play</h3><p>Lyrics in the national tongue with a translation, a melody fitted to the syllables, engraved sheet music, in-browser playback and a MIDI download.</p></article>
+    <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>A printable poster</h3><p>The whole country on one A-series sheet: map, facts, gazetteer, chronicle and sheet music. Download at 150 or 300 dpi, or print it straight from the browser.</p></article>
+  </div>
+</div></section>
+
+<section class="section" style="background:var(--bg2)"><div class="container split">
+  <div><span class="eyebrow">Three map styles</span><h2 class="h2">Pick the mood.</h2><p class="lead">Parchment for the tabletop, atlas for the classroom, night for the dark-mode crowd. Toggle labels, roads and borders, then download at 2400 × 1600.</p><p style="margin-top:26px"><a class="btn primary" href="/app?seed=saffron&tab=map">Open the map tab</a></p></div>
+  <div class="tabsimg"><img src="gallery/map-saffron.jpg" width="1200" height="800" alt="Parchment style map" loading="lazy"><img src="gallery/map-saffron-atlas.jpg" width="1200" height="800" alt="Atlas style map" loading="lazy"><img src="gallery/map-saffron-night.jpg" width="1200" height="800" alt="Night style map" loading="lazy" style="grid-column:1 / span 2"></div>
+</div></section>
+
+<section class="section"><div class="container split">
+  <div><img src="gallery/flags.png" width="1200" height="560" alt="Twelve generated flags" loading="lazy" style="margin-bottom:14px"><img src="gallery/arms.png" width="1200" height="560" alt="Twelve generated coats of arms" loading="lazy"></div>
+  <div><span class="eyebrow">Heraldry</span><h2 class="h2">Flags that mean something.</h2><p class="lead">Every flag and shield is built from real heraldic rules, then dressed with symbols from the land. The Symbols panel tells you what each colour stands for, using the country's own sea, mountains and rivers.</p>
+  <p class="lead" style="margin-top:12px">Twelve countries, twelve flags. None of them were drawn by hand.</p></div>
+</div></section>
+
+<section class="section" style="background:var(--bg2)"><div class="container split">
+  <div><span class="eyebrow">Anthem</span><h2 class="h2">Hum it. Print it. Play it.</h2><p class="lead">Melodies are composed to fit the syllables of the lyrics, in a mode that matches the tongue: dorian for the windswept north, major for the melodic coast. The sheet music is engraved on the page, not pasted in.</p><p style="margin-top:26px"><a class="btn" href="/app?seed=saffron&tab=anthem">Listen to one</a></p></div>
+  <img src="gallery/anthem-saffron.png" width="1200" height="760" alt="Engraved sheet music of a generated anthem" loading="lazy" style="background:#f3ead2">
+</div></section>
+
+<section class="section"><div class="container">
+  <div class="section-head"><span class="eyebrow">How it works</span><h2 class="h2">Deterministic, so it is shareable.</h2></div>
+  <div class="steps">
+    <div class="card"><h3>Type a word</h3><p>Anything works: a name, a phrase, a date. The word is hashed into independent random streams, one per feature.</p></div>
+    <div class="card"><h3>The engine builds it</h3><p>Terrain, rivers, borders, names, heraldry, history and music, all by plain algorithms. No model, no network, no tracking.</p></div>
+    <div class="card"><h3>Share the word</h3><p>Send someone the seed and they see exactly your country. Your table, your readers or your class all get the same map.</p></div>
+  </div>
+  <div class="uses" style="margin-top:40px"><span>Tabletop RPG campaigns</span><span>Novels and screenplays</span><span>Classroom geography</span><span>Game jams</span><span>Worldbuilding prompts</span><span>Wall posters</span></div>
+</div></section>
+
+<section class="section" id="api" style="background:var(--bg2)"><div class="container split">
+  <div><span class="eyebrow">Free image API</span><h2 class="h2">Every piece is a URL.</h2><p class="lead">Embed a flag in your Discord bot, a map in your wiki, an anthem in your game. No key, no limits worth worrying about, and responses with a seed are cached forever.</p><p style="margin-top:26px"><a class="btn" href="/docs">Read the docs</a></p></div>
+  <div class="codewrap"><pre class="code" id="apicode"><span class="c"># a poster, a map, a flag, an anthem</span>
+<span class="k">GET</span> <span class="u">/api/poster</span>?seed=<span class="s">saffron</span>&amp;width=1240
+<span class="k">GET</span> <span class="u">/api/map</span>?seed=<span class="s">saffron</span>&amp;style=atlas
+<span class="k">GET</span> <span class="u">/api/flag</span>?seed=<span class="s">saffron</span>&amp;width=600
+<span class="k">GET</span> <span class="u">/api/anthem</span>?seed=<span class="s">saffron</span>            <span class="c"># MIDI</span>
+<span class="k">GET</span> <span class="u">/api/country</span>?seed=<span class="s">saffron</span>           <span class="c"># JSON</span>
+
+<span class="c"># markdown</span>
+![flag](https://worldscape.vercel.app/flag/saffron)</pre><button class="copy" type="button" data-copy="apicode">Copy</button></div>
+</div></section>
+
+<section class="section"><div class="container" style="max-width:860px">
+  <div class="section-head"><span class="eyebrow">Questions</span><h2 class="h2">Good to know.</h2></div>
+  <details class="faq"><summary>Is it really free?</summary><p>Yes. It is MIT-licensed, has no account, no ads and no API key. The generator runs entirely in your browser, so it also works offline once loaded.</p></details>
+  <details class="faq"><summary>Does it use AI?</summary><p>No. Worldscape is plain algorithms: noise for terrain, flood-fill for rivers and borders, templates and grammars for names and history, and rule-based composition for the music. That is why the same seed gives the same country on every device.</p></details>
+  <details class="faq"><summary>Can I use the results in my game, book or YouTube channel?</summary><p>Yes, including commercially. Maps, flags, poster and anthem are yours. A mention is nice but not required. The fonts are open-source under the SIL Open Font License.</p></details>
+  <details class="faq"><summary>Will the same seed always give the same country?</summary><p>Yes, within one engine version. A rare future version could change the output; the API reports the version in the <code>X-Worldscape-Engine</code> header and tests freeze the current output.</p></details>
+  <details class="faq"><summary>Can I get one specific kind of country?</summary><p>Not directly, but seeds are cheap. Hit “Surprise me” a few times, save the ones you like with the star, and share the words.</p></details>
+</div></section>
+
+<section class="cta"><div class="container"><h2>Your country is one word away.</h2><a class="btn primary" href="/app">Make a country</a></div></section>
+</main>
+
+<footer class="footer"><div class="container">
+  <div><a class="brand" href="/" style="margin-bottom:12px">Worldscape</a><p>Invent a country from a single word. Open source, MIT licensed.</p></div>
+  <div><h4>Product</h4><a href="/app">Generator</a><a href="/docs">API docs</a><a href="/#features">Features</a></div>
+  <div><h4>Project</h4><a href="https://github.com/mskraban/worldscape">GitHub</a><a href="https://github.com/mskraban/worldscape/issues">Issues</a><a href="https://github.com/mskraban/worldscape/blob/main/CONTRIBUTING.md">Contributing</a></div>
+  <div><h4>Also by the author</h4><a href="https://seedscape-azure.vercel.app">Seedscape: wallpapers from a word</a></div>
+  <div class="fine"><span>© Worldscape contributors · MIT</span><span>Fonts: Cinzel, EB Garamond, Inter, Noto Music (SIL OFL)</span></div>
+</div></footer>
+<script>
+document.querySelectorAll('.copy').forEach((b) => b.addEventListener('click', async () => { const t = document.getElementById(b.dataset.copy).innerText; try { await navigator.clipboard.writeText(t); b.textContent = 'Copied'; setTimeout(() => (b.textContent = 'Copy'), 1500); } catch (e) {} }));
+</script>
+</body>
+</html>

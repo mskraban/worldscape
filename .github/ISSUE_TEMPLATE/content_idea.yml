@@ -1,0 +1,14 @@
+name: Content idea
+description: Suggest a new language, flag symbol, history event, map style or anything else
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes: { label: Describe it, description: References and examples are welcome }
+    validations: { required: true }
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Want to build it?
+      options:
+        - label: I'd like to open a pull request (see CONTRIBUTING.md)

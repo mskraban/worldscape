@@ -1,0 +1,15 @@
+name: Bug report
+description: Something looks wrong in a country, a map or the app
+labels: [bug]
+body:
+  - type: input
+    id: seed
+    attributes: { label: Seed, description: The word that shows the problem }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What is wrong?, description: "Screenshots help: a clipped label, a city in the sea, a broken sheet of music…" }
+    validations: { required: true }
+  - type: input
+    id: env
+    attributes: { label: Browser and OS }

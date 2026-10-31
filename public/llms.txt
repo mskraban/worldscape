@@ -1,0 +1,16 @@
+# Worldscape
+
+> Worldscape invents a tiny fictional country from one seed word: a parchment map with rivers, roads and provinces, a flag, a coat of arms, an invented language, a chronicle of its history and a playable anthem with sheet music. Free, open source (MIT), deterministic and offline. No AI is used.
+
+- App: https://worldscape.vercel.app/app
+- Docs: https://worldscape.vercel.app/docs
+- Source: https://github.com/mskraban/worldscape
+
+## API (no key)
+- GET /api/country?seed=WORD → JSON
+- GET /api/poster?seed=WORD&width=1240 → A-series poster (jpeg|png|webp)
+- GET /api/map?seed=WORD&style=parchment|atlas|night → map image
+- GET /api/flag?seed=WORD, /api/arms?seed=WORD → PNG
+- GET /api/anthem?seed=WORD → MIDI; &format=png → sheet music; &format=json → lyrics
+- GET /api/random → a fresh seed with links
+The same seed always returns the same result.

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "outputDirectory": "public",
+  "functions": { "api/*.js": { "maxDuration": 20, "memory": 1536, "includeFiles": "public/{fonts/*.woff2,engine.js}" } },
+  "rewrites": [
+    { "source": "/c/:seed", "destination": "/api/country?seed=:seed" },
+    { "source": "/poster/:seed", "destination": "/api/poster?seed=:seed" },
+    { "source": "/map/:seed", "destination": "/api/map?seed=:seed" },
+    { "source": "/flag/:seed", "destination": "/api/flag?seed=:seed" },
+    { "source": "/arms/:seed", "destination": "/api/arms?seed=:seed" },
+    { "source": "/anthem/:seed", "destination": "/api/anthem?seed=:seed" },
+    { "source": "/random", "destination": "/api/poster" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+      { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+      { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" } ] },
+    { "source": "/fonts/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] },
+    { "source": "/gallery/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" } ] },
+    { "source": "/(favicon.svg|favicon-32.png|apple-touch-icon.png|icon-192.png|icon-512.png|og.jpg)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" } ] },
+    { "source": "/(fonts.css|site.css|engine.js)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" } ] }
+  ]
+}
