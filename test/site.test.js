@@ -7,7 +7,7 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 
 const ROOT = path.join(__dirname, '..'), PUB = path.join(ROOT, 'public');
-const SITE = 'https://worldscape.vercel.app';
+const SITE = 'https://worldscape-mskrabans-projects.vercel.app';
 const pages = { 'index.html': '/', 'app.html': '/app', 'docs.html': '/docs' };
 const read = (f) => fs.readFileSync(path.join(PUB, f), 'utf8');
 const meta = (html, re) => { const m = html.match(re); return m ? m[1] : null; };

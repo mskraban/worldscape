@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://worldscape.vercel.app/sitemap.xml
+Sitemap: https://worldscape-mskrabans-projects.vercel.app/sitemap.xml

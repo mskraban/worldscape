@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { describe, LIMITS } = require('../lib/render');
-const SITE = 'https://worldscape.vercel.app';
+const SITE = 'https://worldscape-mskrabans-projects.vercel.app';
 const d = describe();
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const table = (rows) => `<div class="tablewrap"><table><thead><tr><th>Parameter</th><th>Default</th><th>Description</th></tr></thead><tbody>${rows.map(([a, b, c]) => `<tr><td><code>${esc(a)}</code></td><td><code>${esc(b)}</code></td><td>${c}</td></tr>`).join('')}</tbody></table></div>`;

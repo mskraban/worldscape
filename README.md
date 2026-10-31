@@ -7,7 +7,7 @@
 **Type one word. Get a whole country.**<br>
 A parchment map, a flag, a coat of arms, a language behind every place name, a chronicle of its history and an anthem you can play. Printable as a poster.
 
-[**Try it live →**](https://worldscape.vercel.app/app) · [API docs](https://worldscape.vercel.app/docs) · [Example country](https://worldscape.vercel.app/app?seed=saffron)
+[**Try it live →**](https://worldscape-mskrabans-projects.vercel.app/app) · [API docs](https://worldscape-mskrabans-projects.vercel.app/docs) · [Example country](https://worldscape-mskrabans-projects.vercel.app/app?seed=saffron)
 
 [![CI](https://github.com/mskraban/worldscape/actions/workflows/ci.yml/badge.svg)](https://github.com/mskraban/worldscape/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-e2b13c.svg)](LICENSE)
@@ -72,10 +72,10 @@ Everything is a `GET`. Responses for a seed are cached for a year because they n
 Short forms: `/flag/saffron`, `/map/saffron`, `/poster/saffron`, `/c/saffron`, `/random`. Drop them straight into Markdown:
 
 ```markdown
-![flag](https://worldscape.vercel.app/flag/saffron)
+![flag](https://worldscape-mskrabans-projects.vercel.app/flag/saffron)
 ```
 
-The [full reference](https://worldscape.vercel.app/docs) lists every parameter and limit. It is generated from the code (`npm run docs`), so it cannot drift.
+The [full reference](https://worldscape-mskrabans-projects.vercel.app/docs) lists every parameter and limit. It is generated from the code (`npm run docs`), so it cannot drift.
 
 ## Use the engine in your own project
 

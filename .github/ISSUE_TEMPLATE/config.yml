@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
   - name: API documentation
-    url: https://worldscape.vercel.app/docs
+    url: https://worldscape-mskrabans-projects.vercel.app/docs
     about: Parameters, limits and examples for the image API
