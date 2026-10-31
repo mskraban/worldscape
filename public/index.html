@@ -39,7 +39,7 @@
 .showcase a:nth-child(2) { margin-top: 36px; } @media (max-width: 800px) { .showcase { grid-template-columns: 1fr 1fr; } .showcase a:nth-child(3) { display: none; } .showcase a:nth-child(2) { margin-top: 0; } }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; } @media (max-width: 900px) { .grid3 { grid-template-columns: 1fr 1fr; } } @media (max-width: 600px) { .grid3 { grid-template-columns: 1fr; } }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; } @media (max-width: 900px) { .split { grid-template-columns: 1fr; } }
-.split img { width: 100%; border-radius: 12px; border: 1px solid var(--line2); display: block; }
+.split img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line2); display: block; }
 .tabsimg { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; } .tabsimg img { border-radius: 10px; border: 1px solid var(--line2); width: 100%; }
 .steps { counter-reset: s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; } @media (max-width: 800px) { .steps { grid-template-columns: 1fr; } }
 .steps .card::before { counter-increment: s; content: counter(s); font: 700 34px var(--font-display); color: var(--gold); }
@@ -93,7 +93,7 @@
 
 <section class="section" style="background:var(--bg2)"><div class="container split">
   <div><span class="eyebrow">Anthem</span><h2 class="h2">Hum it. Print it. Play it.</h2><p class="lead">Melodies are composed to fit the syllables of the lyrics, in a mode that matches the tongue: dorian for the windswept north, major for the melodic coast. The sheet music is engraved on the page, not pasted in.</p><p style="margin-top:26px"><a class="btn" href="/app?seed=saffron&tab=anthem">Listen to one</a></p></div>
-  <img src="gallery/anthem-saffron.png" width="1200" height="760" alt="Engraved sheet music of a generated anthem" loading="lazy" style="background:#f3ead2">
+  <img src="gallery/anthem-saffron.png" width="1200" height="1106" alt="Engraved sheet music of a generated anthem" loading="lazy" style="background:#f3ead2;height:auto">
 </div></section>
 
 <section class="section"><div class="container">
